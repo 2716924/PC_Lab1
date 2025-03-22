@@ -9,8 +9,7 @@ int main(){
     double step,pi,sum=0.0,x;
     step = 1.0/(double)num_steps;
 
-    while (true)
-    {
+
         #pragma omp parallel 
         {
             tthreads = omp_get_num_threads();
@@ -25,7 +24,7 @@ int main(){
         pi = step*sum;
         printf("pi = %f\n",pi);
        
-    }
+    
     
 
     return 0;
